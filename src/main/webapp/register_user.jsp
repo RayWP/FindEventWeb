@@ -53,7 +53,7 @@
 	                <h1>Registration</h1>
 	                <div class="form-row">
 	                    <div class="col-xl-12 d-flex flex-column justify-content-center align-items-center align-content-center" style="padding-top: 28px;padding-right: 10px;padding-bottom: 15px;">
-	                    <input class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="My name" name="username" value="${username }" required>
+	                    <input class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="My name" name="username" value="${username }" maxlength="30" required>
 	                    <input class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="johndoe@email.com" name="email" value="${email }" required pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">
 	                    <input class="form-control" type="password" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="password (8-20 digits)" name="password" required="required" minlength="8" maxlength="20">
 	                    <input class="form-control" type="password" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="re-type password (8-20 digits)" name="re_password" required="required" minlength="8" maxlength="20">
