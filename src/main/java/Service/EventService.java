@@ -19,13 +19,16 @@ import java.util.Calendar;
  * @author Raymond WP aka rwp1byte
  */
 public class EventService {
-    public static void createEvent(Event event){
+    public static String createEvent(Event event){
         int result = new EventDAOImpl().insert(event);
         if(result <= 0 ){
             System.out.println("Failed to create event");
+            return "Failed to create event";
         } else {
             System.out.println("Success to create event");
+            return "Success to create event";
         }
+        
     }
     
     @Test
