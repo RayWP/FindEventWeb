@@ -45,8 +45,8 @@ public class UserDAOImpl implements UserDAO{
         int result = 0;
         try {
             QueryRunner qr = new QueryRunner(MyDatabase.getDataSource());
-            String sql = "UPDATE USER SET username = ?, description = ? , password = ? WHERE id = ?";
-            result = qr.execute(sql, user.getUsername(), user.getDescription(), user.getPassword(), user.getId());
+            String sql = "UPDATE USER SET username = ?, description = ? WHERE id = ?";
+            result = qr.execute(sql, user.getUsername(), user.getDescription(), user.getId());
         } catch (Exception e) {
             System.out.println(this.getClass().getName()+ " erorr: " + e.getMessage());
         }

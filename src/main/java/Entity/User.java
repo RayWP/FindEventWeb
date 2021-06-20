@@ -17,6 +17,7 @@ public class User {
     private String description;
 
     public User() {
+    	
     }
     
     public User(String password, String email) {
@@ -24,7 +25,19 @@ public class User {
         this.email = email;
     }   
     
-    public User(String username, String password, String email, String description) {
+    
+
+	public User(int id, String username, String email, String description) {
+		super();
+		this.id = id;
+		this.username = username;
+		this.email = email;
+		this.description = description;
+	}
+
+
+
+	public User(String username, String password, String email, String description) {
         this.username = username;
         this.password = password;
         this.email = email;
