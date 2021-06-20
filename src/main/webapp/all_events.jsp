@@ -36,8 +36,13 @@
     
     <div class="container" style="margin-top: 50px;">
         <h1 class="text-center text-light">Your Events</h1>
-        <div class="row" style="margin-bottom: 20px;">
+        <form class="d-flex flex-row justify-content-left align-items-center" style="margin-bottom: 20px" method="post" action="EventAll">
+             <input class="form-control" style="width: 30%; margin-right: 20px" placeholder="Find event name" name="event_name" value="${event_name }">
+	         <button class="btn btn-outline-light" data-bss-hover-animate="rubberBand" type="submit" style="width: 10%;">Search</button>
+        </form>
         
+        <div class="row" style="margin-bottom: 20px;">
+        	
             <c:forEach items="${all_events }" var="event">
             	<div class="col-md-12 col-lg-6 col-xl-4" style="margin-bottom: 20px">
 	                <div class="card" data-aos="fade-up" data-aos-duration="950" data-aos-once="true">

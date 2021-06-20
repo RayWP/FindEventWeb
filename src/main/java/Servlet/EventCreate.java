@@ -65,7 +65,7 @@ public class EventCreate extends HttpServlet {
 			}
 			
 			
-			String result = new EventService().createEvent(new_event);
+			String result = EventService.createEvent(new_event);
 			request.setAttribute("alert", result);
 			request.getRequestDispatcher("/dashboard.jsp").forward(request, response);
 		}

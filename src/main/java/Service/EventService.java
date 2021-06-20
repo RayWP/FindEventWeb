@@ -7,13 +7,8 @@ package Service;
 
 import DAOImpl.EventDAOImpl;
 import Entity.Event;
-
-import java.io.File;
-import java.util.Date;
 import java.util.List;
 import org.junit.Test;
-
-import java.util.Calendar;
 
 /**
  *
@@ -39,9 +34,10 @@ public class EventService {
 //        Event event = new Event("GCO", "DESC 1", date,1 , "www.com", "Userpath"+File.separator+"test", "Dalang");
 //        createEvent(event);
 //    	findAll();
-//    	findEventWith(26);
+//    	findEventWith(27);
 //    	findEventWith(1);
-    	findEventMadeBy(1);
+//    	findEventMadeBy(1);
+//    	findEventWithName("GCO");
     }
 
 	public static List<Event> findAll() {
@@ -54,6 +50,12 @@ public class EventService {
 		Event event = new EventDAOImpl().getEventWithId(id);
 		System.out.println("get event from findeventwithid: " + event);
 		return event;
+	}
+	
+	public static List<Event> findEventWithName(String event_name) {
+		List<Event> all_events = new EventDAOImpl().getEventWithName(event_name);
+		System.out.println("all  with name: " + all_events + event_name);
+		return all_events;
 	}
 
 	public static List<Event> findEventMadeBy(int holder_id) {
@@ -72,4 +74,6 @@ public class EventService {
 			return "sukses delete event";
 		}
 	}
+
+	
 }

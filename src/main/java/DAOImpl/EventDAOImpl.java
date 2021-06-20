@@ -48,16 +48,17 @@ public class EventDAOImpl implements EventDAO{
         List<Event> event_list = null;
         try {
             QueryRunner qr = new QueryRunner(MyDatabase.getDataSource());
-            String sql = "INSERT INTO event(name, description, date, holder_id, link, speaker, image_path) VALUES(?,?,?,?,?,?,?)";
-//            result = qr.execute(sql, event.getName(), event.getDescription(), event.getDate(), event.getHolder_id(), event.getLink(), event.getSpeaker(), event.getImage_path() );
+//            String sql = "SELECT * FROM event WHERE name LIKE ?";
+            String sql = "SELECT * FROM event WHERE name LIKE " + "'%"+name+"%' AND date > CURDATE() ORDER BY date ASC";
+            event_list = qr.query(sql, new BeanListHandler<Event>(Event.class));
         } catch (Exception e) {
             System.out.println(this.getClass().getName()+ " erorr: " + e.getMessage());
         }
+        
         return event_list;
     }
 
     public Event getEventWithId(int id) {
-//        ganti bos;
         Event event = null;
         try {
             QueryRunner qr = new QueryRunner(MyDatabase.getDataSource());
@@ -94,5 +95,7 @@ public class EventDAOImpl implements EventDAO{
         }
         return event_list;
 	}
+
+
 
 }

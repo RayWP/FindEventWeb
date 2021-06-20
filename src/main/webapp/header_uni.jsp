@@ -10,7 +10,7 @@
 <body>
 <header style="height: 5%; padding-bottom: 0px">
     <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-        <div class="container-fluid"><a class="navbar-brand" href="index.jsp">FindEventHeader</a>
+        <div class="container-fluid"><a class="navbar-brand" href="index.jsp">FindEvent</a>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link active" href="EventAll">Events</a></li>

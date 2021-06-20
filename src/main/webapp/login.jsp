@@ -47,9 +47,11 @@
                 <h1>Login</h1>
                 <div class="form-row">
                     <div class="col-md-12 col-xl-12 d-flex flex-column justify-content-center align-items-center align-content-center" style="padding-top: 28px;padding-right: 10px;padding-bottom: 15px;">
-                    <input required class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="johndoe@email.com" name="email" required inputmode="email" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">
-                    <input required class="form-control" type="password" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="password" name="password" required minlength="8" maxlength="20">
-                    <button class="btn btn-primary" data-bss-hover-animate="rubberBand" type="submit" style="width: 80%;margin-top: 14px;margin-bottom: 14px;">Login</button><a href="#">Create New Account</a></div>
+	                    <input required class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="johndoe@email.com" name="email" required inputmode="email" pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">
+	                    <input required class="form-control" type="password" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="password" name="password" required minlength="8" maxlength="20">
+	                    <button class="btn btn-primary" data-bss-hover-animate="rubberBand" type="submit" style="width: 80%;margin-top: 14px;margin-bottom: 14px;">Login</button>
+	                    <a href="register_user.jsp">Create New Account</a>
+                    </div>
                 </div>
             </div>
         </form>
