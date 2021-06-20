@@ -73,8 +73,8 @@ public class EventDAOImpl implements EventDAO{
         int result = 0;
         try {
             QueryRunner qr = new QueryRunner(MyDatabase.getDataSource());
-            String sql = "INSERT INTO event(name, description, date, holder_id, link, speaker, image_path) VALUES(?,?,?,?,?,?,?)";
-            result = qr.execute(sql, event.getName(), event.getDescription(), event.getDate(), event.getHolder_id(), event.getLink(), event.getSpeaker(), event.getImage_path() );
+            String sql = "DELETE FROM event WHERE id = ? AND holder_id = ?";
+            result = qr.execute(sql, event.getId(), event.getHolder_id() );
         } catch (Exception e) {
             System.out.println(this.getClass().getName()+ " erorr: " + e.getMessage());
         }

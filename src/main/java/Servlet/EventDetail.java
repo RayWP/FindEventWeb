@@ -26,7 +26,7 @@ public class EventDetail extends HttpServlet {
 			Event event = EventService.findEventWith(id);
 			
 			if(event == null) {
-//				if event doest not exist
+//				if event does not exist
 				response.sendRedirect("index.jsp");
 			} else {
 //				if event exist
@@ -34,7 +34,7 @@ public class EventDetail extends HttpServlet {
 				request.getRequestDispatcher("/detail_event.jsp").forward(request, response);
 			}
 		} else {
-//			if the parameter is null
+//			if the parameter is null we will send them back to index.jsp
 			response.sendRedirect("index.jsp");
 		}
 	}

@@ -61,4 +61,15 @@ public class EventService {
 		System.out.println("all events: " + all_events);
 		return all_events;
 	}
+
+	public static String delete(Event delete_event) {
+		int result = new EventDAOImpl().delete(delete_event);
+		if(result<=0) {
+			System.out.println("failed delete event");
+			return "failed delete event";
+		} else {
+			System.out.println("sukses delete event");
+			return "sukses delete event";
+		}
+	}
 }

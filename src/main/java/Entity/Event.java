@@ -25,7 +25,17 @@ public class Event {
         
     }
 
-    public Event(String name, String description, Date date, int holder_id, String link, String image_path, String speaker) {
+    
+    
+    public Event(int id, int holder_id) {
+		super();
+		this.id = id;
+		this.holder_id = holder_id;
+	}
+
+
+
+	public Event(String name, String description, Date date, int holder_id, String link, String image_path, String speaker) {
         this.name = name;
         this.description = description;
         this.date = date;
