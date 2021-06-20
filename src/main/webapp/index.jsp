@@ -43,7 +43,7 @@
 		                      	<a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#" style="width: 15%;color: rgb(255,255,255);font-family: 'Source Sans Pro', sans-serif;">${sessionScope.user.username } </a>
 		                          <div class="dropdown-menu">
 		                          	<a class="dropdown-item" href="UserProfile">My Profile</a>
-		                          	<a class="dropdown-item" href="UserEventServ">My Events</a>
+		                          	<a class="dropdown-item" href="UserEvent">My Events</a>
 		                          	<a class="dropdown-item" href="UserLogout">Log out</a>
 		                          </div>
 		                      </li>

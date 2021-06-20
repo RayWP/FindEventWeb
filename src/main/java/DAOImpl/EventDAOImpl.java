@@ -70,7 +70,6 @@ public class EventDAOImpl implements EventDAO{
     }
 
     public int delete(Event event) {
-//        ganti bos;
         int result = 0;
         try {
             QueryRunner qr = new QueryRunner(MyDatabase.getDataSource());
@@ -81,5 +80,19 @@ public class EventDAOImpl implements EventDAO{
         }
         return result;
     }
-    
+
+
+	@Override
+	public List<Event> getEventMadeBy(int holder_id) {
+		List<Event> event_list = null;
+        try {
+            QueryRunner qr = new QueryRunner(MyDatabase.getDataSource());
+            String sql = "SELECT * FROM event WHERE holder_id = ? ORDER BY date ASC";
+            event_list = qr.query(sql, new BeanListHandler<Event>(Event.class), holder_id);
+        } catch (Exception e) {
+            System.out.println(this.getClass().getName()+ " erorr: " + e.getMessage());
+        }
+        return event_list;
+	}
+
 }

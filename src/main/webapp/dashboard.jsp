@@ -49,10 +49,12 @@
             	<div class="col-md-12 col-lg-6 col-xl-4" style="margin-bottom: 20px">
 	                <div class="card" data-aos="fade-up" data-aos-duration="950" data-aos-once="true">
 	                    <div class="card-body d-flex flex-column justify-content-between" data-bss-hover-animate="pulse" style="height: 240px;">
-	                        <h3 class="card-title">event.name</h3>
-	                        <h4 class="text-muted card-subtitle mb-2">event.date</h4>
-	                        <p class="card-text" style="height: 77px;">event.description</p>
-	                        <a class="card-link" href="#">More info</a>
+	                        <h3 class="card-title">${event.name}</h3>
+	                        <h4 class="text-muted card-subtitle mb-2">${event.date}</h4>
+	                        <p class="card-text" style="height: 77px;">${event.description}</p>
+	                        <a class="card-link" href="EventDetail?id=${event.id }">More info</a>
+	                        <br>
+	                        <a class="card-link text-danger" href="EventDelete?id=${event.id }">Delete this event</a>
 	                    </div>
 	                </div>
 	            </div>

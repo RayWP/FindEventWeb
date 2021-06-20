@@ -14,7 +14,7 @@
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item"><a class="nav-link active" href="EventAll">Events</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Tech Stack</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="tech_stack.jsp">Tech Stack</a></li>
                 </ul>
                 <span class="navbar-text actions"> 
                 	<c:if test="${not empty sessionScope.user }">
@@ -23,7 +23,7 @@
 	                      	<a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#" style="width: 15%;color: rgb(255,255,255);font-family: 'Source Sans Pro', sans-serif;">${sessionScope.user.username } </a>
 	                          <div class="dropdown-menu" style="color: black;">
 	                          	<a class="dropdown-item" style="color: black;" href="UserProfile">My Profile</a>
-	                          	<a class="dropdown-item" style="color: black;" href="UserEventServ">My Events</a>
+	                          	<a class="dropdown-item" style="color: black;" href="UserEvent">My Events</a>
 	                          	<a class="dropdown-item" style="color: black;" href="UserLogout">Log out</a>
 	                          </div>
 	                      </li>

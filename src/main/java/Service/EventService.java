@@ -39,8 +39,9 @@ public class EventService {
 //        Event event = new Event("GCO", "DESC 1", date,1 , "www.com", "Userpath"+File.separator+"test", "Dalang");
 //        createEvent(event);
 //    	findAll();
-    	findEventWith(26);
-    	findEventWith(1);
+//    	findEventWith(26);
+//    	findEventWith(1);
+    	findEventMadeBy(1);
     }
 
 	public static List<Event> findAll() {
@@ -53,5 +54,11 @@ public class EventService {
 		Event event = new EventDAOImpl().getEventWithId(id);
 		System.out.println("get event from findeventwithid: " + event);
 		return event;
+	}
+
+	public static List<Event> findEventMadeBy(int holder_id) {
+		List<Event> all_events = new EventDAOImpl().getEventMadeBy(holder_id);
+		System.out.println("all events: " + all_events);
+		return all_events;
 	}
 }
