@@ -53,7 +53,7 @@ public class UserProfile extends HttpServlet {
 			
 //				if: failed to create account, else: success create account
 			if(result<=0) {
-				request.setAttribute("error", "Email has been used");
+				request.setAttribute("alert", "Email has been used");
 			} else {
 				current_user.setUsername(username);
 				current_user.setDescription(description);

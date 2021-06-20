@@ -42,9 +42,9 @@
 	<body style="background: var(--blue);">
 		
 		<%@ include file="header_uni.jsp" %>
-	    <c:if test="${not empty error }">
+	    <c:if test="${not empty alert }">
 	    	<script>
-	    		alert("${error}");
+	    		alert("${alert}");
 	    	</script>
 	    </c:if>
 	    <div class="form-group" style="padding: 0px;padding-top: 4%;">

@@ -31,7 +31,7 @@ public class UserLogin extends HttpServlet {
     	User user = new User(password, email);
     	user = UserService.login(user);
     	if(user == null) {
-    		req.setAttribute("error", "User not found/password or username is wrong");
+    		req.setAttribute("alert", "User not found/password or username is wrong");
     		req.getRequestDispatcher("/login.jsp").forward(req, resp);
     		
     	} else {

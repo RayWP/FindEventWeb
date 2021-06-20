@@ -39,7 +39,7 @@ public class UserRegistration extends HttpServlet {
 			
 //			if: failed to create account, else: success create account
 			if(result<=0) {
-				request.setAttribute("error", "Email has been used");
+				request.setAttribute("alert", "Email has been used");
 				request.getRequestDispatcher("/register_user.jsp").forward(request, response);
 			} else {
 				request.getRequestDispatcher("/UserLogin").forward(request, response);

@@ -35,9 +35,9 @@
 	
 	<%@ include file="header_uni.jsp" %>
     
-    <c:if test="${not empty error }">
+    <c:if test="${not empty alert }">
     	<script>
-    		alert("${error}");
+    		alert("${alert}");
     	</script>
     </c:if>
     
