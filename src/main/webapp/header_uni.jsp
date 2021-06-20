@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>FindEvent</title>
 </head>
 <body>
 <header style="height: 5%; padding-bottom: 0px">

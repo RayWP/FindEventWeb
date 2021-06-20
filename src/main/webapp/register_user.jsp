@@ -7,7 +7,7 @@
 	<head>
 	    <meta charset="utf-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-	    <title>index</title>
+	    <title>FindEvent</title>
 	    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
 	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
 	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
@@ -58,7 +58,7 @@
 	                    <input class="form-control" type="password" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="password (8-20 digits)" name="password" required="required" minlength="8" maxlength="20">
 	                    <input class="form-control" type="password" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="re-type password (8-20 digits)" name="re_password" required="required" minlength="8" maxlength="20">
 	                    <input class="form-control" type="text" style="margin-bottom: 2%;margin-left: 0px;width: 80%;height: 100px;" placeholder="description" value="${description }" name="description" required>
-	                    <button class="btn btn-primary" data-bss-hover-animate="rubberBand" type="submit" style="width: 80%;margin-top: 14px;margin-bottom: 14px;">Button</button></div>
+	                    <button class="btn btn-primary" data-bss-hover-animate="rubberBand" type="submit" style="width: 80%;margin-top: 14px;margin-bottom: 14px;">Create account!</button></div>
 	                </div>
 	            </div>
 	        </form>
