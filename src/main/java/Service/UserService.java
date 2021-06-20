@@ -14,15 +14,19 @@ import org.junit.Test;
  * @author Raymond WP aka rwp1byte
  */
 public class UserService {
-    public static void register(User user){
+	
+//	tested, to create a new user
+    public static int register(User user){
         int result = new UserDAOImpl().insert(user);
         if(result<=0) {
             System.out.println("Failed to create user");
         } else {
             System.out.println("Success create user");
         }
+        return result;
     }
     
+//    tested login
     public static User login(User user) {
         User logged_user = new UserDAOImpl().getUserWith(user.getEmail(), user.getPassword());
         if(logged_user == null) {
@@ -34,7 +38,7 @@ public class UserService {
         }
     }
     
-//    
+//  Tested get user with certain id  
     public static User findUserWith(int id) {
         User logged_user = new UserDAOImpl().getUserWith(id);
         if(logged_user == null) {

@@ -24,7 +24,7 @@
 	                          <div class="dropdown-menu" style="color: black;">
 	                          	<a class="dropdown-item" style="color: black;" href="UserProfile">My Profile</a>
 	                          	<a class="dropdown-item" style="color: black;" href="UserEventServ">My Events</a>
-	                          	<a class="dropdown-item" style="color: black;" href="LogoutServ">Log out</a>
+	                          	<a class="dropdown-item" style="color: black;" href="UserLogout">Log out</a>
 	                          </div>
 	                      </li>
 	                  </ul>

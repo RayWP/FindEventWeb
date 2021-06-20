@@ -21,8 +21,8 @@ public class UserDAOImpl implements UserDAO{
         int result = 0;
         try {
             QueryRunner qr = new QueryRunner(MyDatabase.getDataSource());
-            String sql = "INSERT INTO event(username, password, email, image_path, description) VALUES(?,?,?,?,?)";
-            result = qr.execute(sql, user.getUsername(), user.getPassword(), user.getEmail(), user.getImage_path(), user.getDescription());
+            String sql = "INSERT INTO user(username, password, email, description) VALUES(?,?,?,?)";
+            result = qr.execute(sql, user.getUsername(), user.getPassword(), user.getEmail(), user.getDescription());
         } catch (Exception e) {
             System.out.println(this.getClass().getName()+ " erorr: " + e.getMessage());
         }

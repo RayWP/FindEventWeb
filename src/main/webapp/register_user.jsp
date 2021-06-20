@@ -42,16 +42,17 @@
 	<body style="background: var(--blue);">
 		
 		<%@ include file="header_uni.jsp" %>
-	    
+	    <c:if test="${not empty error }">
+	    	<script>
+	    		alert("${error}");
+	    	</script>
+	    </c:if>
 	    <div class="form-group" style="padding: 0px;padding-top: 4%;">
-	        <form class="d-flex flex-column justify-content-center align-items-center" method="post" action="RegisterUserServ" enctype="multipart/form-data" autocomplete="off">
+	        <form class="d-flex flex-column justify-content-center align-items-center" method="post" action="UserRegistration" autocomplete="off">
 	            <div class="container" style="width: 70%;padding-top: 15px;padding-bottom: 15px;background: var(--light);border-radius: 20px;box-shadow: 12px 10px 11px 0px;">
 	                <h1>Registration</h1>
 	                <div class="form-row">
-	                    <div class="col-md-6 col-lg-6 col-xl-4 offset-xl-0" style="padding-top: 10px;padding-right: 10px;padding-bottom: 15px;">
-	                    <img style="width: 175px;height: 280px;margin: 0px;border: 1px solid rgb(0,0,0) ;" name="image_show" id="blah" src="${book_image }">
-	                    <input class="form-control-file" type="file" style="margin-top: 6px;" accept="image/*" name="user_image" id="imgInp" onchange="loadFile(event)"></div>
-	                    <div class="col-md-6 col-xl-8 d-flex flex-column justify-content-center align-items-center align-content-center" style="padding-top: 28px;padding-right: 10px;padding-bottom: 15px;">
+	                    <div class="col-xl-12 d-flex flex-column justify-content-center align-items-center align-content-center" style="padding-top: 28px;padding-right: 10px;padding-bottom: 15px;">
 	                    <input class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="My name" name="username" value="${username }" required>
 	                    <input class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="johndoe@email.com" name="email" value="${email }" required pattern="^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$">
 	                    <input class="form-control" type="password" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" placeholder="password (8-20 digits)" name="password" required="required" minlength="8" maxlength="20">

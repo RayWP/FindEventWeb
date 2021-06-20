@@ -14,7 +14,6 @@ public class User {
     private String username;
     private String password;
     private String email;
-    private String image_path;
     private String description;
 
     public User() {
@@ -25,20 +24,18 @@ public class User {
         this.email = email;
     }   
     
-    public User(String username, String password, String email, String image_path, String description) {
+    public User(String username, String password, String email, String description) {
         this.username = username;
         this.password = password;
         this.email = email;
-        this.image_path = image_path;
         this.description = description;
     }
 
-    public User(int id, String username, String password, String email, String image_path, String description) {
+    public User(int id, String username, String password, String email, String description) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.email = email;
-        this.image_path = image_path;
         this.description = description;
     }
 
@@ -76,14 +73,6 @@ public class User {
         this.email = email;
     }
 
-    public String getImage_path() {
-        return image_path;
-    }
-
-    public void setImage_path(String image_path) {
-        this.image_path = image_path;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -94,7 +83,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{" + "id=" + id + ", username=" + username + ", password=" + password + ", email=" + email + ", image_path=" + image_path + ", description=" + description + '}';
+        return "User{" + "id=" + id + ", username=" + username + ", password=" + password + ", email=" + email + ", description=" + description + '}';
     }
     
     

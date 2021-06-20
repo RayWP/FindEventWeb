@@ -44,7 +44,7 @@
 		                          <div class="dropdown-menu">
 		                          	<a class="dropdown-item" href="UserProfile">My Profile</a>
 		                          	<a class="dropdown-item" href="UserEventServ">My Events</a>
-		                          	<a class="dropdown-item" href="LogoutServ">Log out</a>
+		                          	<a class="dropdown-item" href="UserLogout">Log out</a>
 		                          </div>
 		                      </li>
 		                  </ul>
