@@ -33,7 +33,7 @@
             <div class="container-fluid"><a class="navbar-brand" href="index.jsp">FindEvent</a>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a class="nav-link active" href="#">Events</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="EventAll">Events</a></li>
                         <li class="nav-item"><a class="nav-link active" href="#">Tech Stack</a></li>
                     </ul>
                     <span class="navbar-text actions"> 

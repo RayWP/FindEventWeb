@@ -7,9 +7,10 @@ package Service;
 
 import DAOImpl.EventDAOImpl;
 import Entity.Event;
+
 import java.io.File;
 import java.util.Date;
-
+import java.util.List;
 import org.junit.Test;
 
 import java.util.Calendar;
@@ -33,9 +34,24 @@ public class EventService {
     
     @Test
     public void testRunner(){
-        Calendar cd = new Calendar.Builder().setDate(2020, 3, 13).build();
-        Date date = cd.getTime();
-        Event event = new Event("GCO", "DESC 1", date,1 , "www.com", "Userpath"+File.separator+"test", "Dalang");
-        createEvent(event);
+//        Calendar cd = new Calendar.Builder().setDate(2020, 3, 13).build();
+//        Date date = cd.getTime();
+//        Event event = new Event("GCO", "DESC 1", date,1 , "www.com", "Userpath"+File.separator+"test", "Dalang");
+//        createEvent(event);
+//    	findAll();
+    	findEventWith(26);
+    	findEventWith(1);
     }
+
+	public static List<Event> findAll() {
+		List<Event> all_events = new EventDAOImpl().getAllEvent();
+		System.out.println("all events: " + all_events);
+		return all_events;
+	}
+
+	public static Event findEventWith(int id) {
+		Event event = new EventDAOImpl().getEventWithId(id);
+		System.out.println("get event from findeventwithid: " + event);
+		return event;
+	}
 }

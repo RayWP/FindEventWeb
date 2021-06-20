@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>FindEvent</title>
+    <title>index</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
@@ -29,37 +29,40 @@
     <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
     <link rel="stylesheet" href="assets/css/Simple-Slider.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+		//to load image when uploaded
+    	var loadFile = function(event) {
+			var image = document.getElementById('blah');
+			image.src = URL.createObjectURL(event.target.files[0]);
+		};
+	</script>
 </head>
 
 <body style="background: var(--blue);">
-    <%@ include file="header_uni.jsp" %>
-    
-    <div class="container" style="margin-top: 50px;">
-        <h1 class="text-center text-light">Your Events</h1>
-        <div class="row" style="margin-bottom: 20px;">
-            <div class="col-md-12 col-lg-6 col-xl-4" style="margin-bottom: 20px">
-                <div class="card" data-aos="fade-up" data-aos-duration="950" data-aos-once="true">
-                    <div class="card-body d-flex flex-column align-items-center" data-bss-hover-animate="pulse" style="height: 240px;">
-                        <h4 class="card-title">Create New Event</h4><a class="card-link" href="create_event.jsp"><img src="assets/img/icons8_add_64.png" width="100px" height="100px" loading="lazy"></a>
+	<%@ include file="header_uni.jsp" %>
+    <c:if test="${not empty error }">
+    	<script>
+    		alert("${error}");
+    	</script>
+    </c:if>
+    <div class="form-group" style="padding: 0px;padding-top: 4%;">
+        <form class="d-flex flex-column justify-content-center align-items-center" method="post" action="EventCreate" enctype="multipart/form-data">
+            <div class="container" style="width: 70%;padding-top: 15px;padding-bottom: 15px;background: var(--light);border-radius: 20px;box-shadow: 12px 10px 11px 0px;">
+                <h1>Event detail</h1>
+                <div class="form-row">
+                    <div class="col-md-6 col-lg-6 col-xl-4 offset-xl-0" style="padding-top: 10px;padding-right: 10px;padding-bottom: 15px;">
+                    	<img style="width: 175px;height: 280px;margin: 0px;border: 1px solid rgb(0,0,0) ;" id="blah" src="${event.image_path }">
+                    </div>
+                    <div class="col-md-6 col-xl-8 d-flex flex-column justify-content-center align-items-center align-content-center" style="padding-top: 28px;padding-right: 10px;padding-bottom: 15px;">
+	                    <input readonly class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" value="${event.name }">
+	                    <a readonly class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" href="//${event.link }">${event.link }</a>
+	                    <input readonly class="form-control" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" type="date" value="${event.date }">
+	                    <input readonly class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" value="${event.name }">
+	                    <input readonly class="form-control" type="text" style="margin-bottom: 2%;margin-left: 0px;width: 80%;height: 100px;" value="${event.description }">
                     </div>
                 </div>
             </div>
-            
-            <c:forEach items="${all_events }" var="event">
-            	<div class="col-md-12 col-lg-6 col-xl-4" style="margin-bottom: 20px">
-	                <div class="card" data-aos="fade-up" data-aos-duration="950" data-aos-once="true">
-	                    <div class="card-body d-flex flex-column justify-content-between" data-bss-hover-animate="pulse" style="height: 240px;">
-	                        <h3 class="card-title">event.name</h3>
-	                        <h4 class="text-muted card-subtitle mb-2">event.date</h4>
-	                        <p class="card-text" style="height: 77px;">event.description</p>
-	                        <a class="card-link" href="#">More info</a>
-	                    </div>
-	                </div>
-	            </div>
-            </c:forEach>
-            
-            
-        </div>
+        </form>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>

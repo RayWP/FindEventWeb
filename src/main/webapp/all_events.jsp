@@ -37,28 +37,19 @@
     <div class="container" style="margin-top: 50px;">
         <h1 class="text-center text-light">Your Events</h1>
         <div class="row" style="margin-bottom: 20px;">
-            <div class="col-md-12 col-lg-6 col-xl-4" style="margin-bottom: 20px">
-                <div class="card" data-aos="fade-up" data-aos-duration="950" data-aos-once="true">
-                    <div class="card-body d-flex flex-column align-items-center" data-bss-hover-animate="pulse" style="height: 240px;">
-                        <h4 class="card-title">Create New Event</h4><a class="card-link" href="create_event.jsp"><img src="assets/img/icons8_add_64.png" width="100px" height="100px" loading="lazy"></a>
-                    </div>
-                </div>
-            </div>
-            
+        
             <c:forEach items="${all_events }" var="event">
             	<div class="col-md-12 col-lg-6 col-xl-4" style="margin-bottom: 20px">
 	                <div class="card" data-aos="fade-up" data-aos-duration="950" data-aos-once="true">
 	                    <div class="card-body d-flex flex-column justify-content-between" data-bss-hover-animate="pulse" style="height: 240px;">
-	                        <h3 class="card-title">event.name</h3>
-	                        <h4 class="text-muted card-subtitle mb-2">event.date</h4>
-	                        <p class="card-text" style="height: 77px;">event.description</p>
-	                        <a class="card-link" href="#">More info</a>
+	                        <h3 class="card-title">${ event.name}</h3>
+	                        <h4 class="text-muted card-subtitle mb-2"> ${event.date}</h4>
+	                        <p class="card-text" style="height: 77px;">${event.description}</p>
+	                        <a class="card-link" href="EventDetail?id=${event.id }">More info</a>
 	                    </div>
 	                </div>
 	            </div>
             </c:forEach>
-            
-            
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>

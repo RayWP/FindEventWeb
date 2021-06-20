@@ -10,6 +10,8 @@ import Database.MyDatabase;
 import Entity.Event;
 import java.util.List;
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
 
 /**
  *
@@ -34,8 +36,8 @@ public class EventDAOImpl implements EventDAO{
         List<Event> event_list = null;
         try {
             QueryRunner qr = new QueryRunner(MyDatabase.getDataSource());
-            String sql = "INSERT INTO event(name, description, date, holder_id, link, speaker, image_path) VALUES(?,?,?,?,?,?,?)";
-//            result = qr.execute(sql, event.getName(), event.getDescription(), event.getDate(), event.getHolder_id(), event.getLink(), event.getSpeaker(), event.getImage_path() );
+            String sql = "SELECT * FROM event WHERE date > CURDATE() ORDER BY date ASC";
+            event_list = qr.query(sql, new BeanListHandler<Event>(Event.class));
         } catch (Exception e) {
             System.out.println(this.getClass().getName()+ " erorr: " + e.getMessage());
         }
@@ -54,17 +56,17 @@ public class EventDAOImpl implements EventDAO{
         return event_list;
     }
 
-    public List<Event> getEventWithId(int id) {
+    public Event getEventWithId(int id) {
 //        ganti bos;
-        List<Event> event_list = null;
+        Event event = null;
         try {
             QueryRunner qr = new QueryRunner(MyDatabase.getDataSource());
-            String sql = "INSERT INTO event(name, description, date, holder_id, link, speaker, image_path) VALUES(?,?,?,?,?,?,?)";
-//            result = qr.execute(sql, event.getName(), event.getDescription(), event.getDate(), event.getHolder_id(), event.getLink(), event.getSpeaker(), event.getImage_path() );
+            String sql = "SELECT * FROM event WHERE id = ?";
+            event = qr.query(sql, new BeanHandler<Event>(Event.class), id);
         } catch (Exception e) {
             System.out.println(this.getClass().getName()+ " erorr: " + e.getMessage());
         }
-        return event_list;
+        return event;
     }
 
     public int delete(Event event) {
