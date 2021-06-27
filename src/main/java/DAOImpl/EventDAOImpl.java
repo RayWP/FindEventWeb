@@ -97,5 +97,19 @@ public class EventDAOImpl implements EventDAO{
 	}
 
 
+	@Override
+	public int update(Event event) {
+		int result = 0;
+        try {
+            QueryRunner qr = new QueryRunner(MyDatabase.getDataSource());
+            String sql = "UPDATE event SET name = ?, description = ?, date = ?, link = ? WHERE id = ?";
+            result = qr.execute(sql, event.getName(), event.getDescription(), event.getDate(), event.getLink(), event.getLink(), event.getId());
+        } catch (Exception e) {
+            System.out.println(this.getClass().getName()+ " erorr: " + e.getMessage());
+        }
+        return result;
+	}
+
+
 
 }

@@ -36,7 +36,8 @@
     
     <div class="container" style="margin-top: 50px;">
         <h1 class="text-center text-light">Your Events</h1>
-        <form class="d-flex flex-row justify-content-left align-items-center" style="margin-bottom: 20px" method="post" action="EventAll">
+        <form class="d-flex flex-row justify-content-left align-items-center" 
+        	style="margin-bottom: 20px" method="post" action="EventAll">
              <input class="form-control" style="width: 30%; margin-right: 20px" placeholder="Find event name" name="event_name" value="${event_name }">
 	         <button class="btn btn-outline-light" data-bss-hover-animate="rubberBand" type="submit" style="width: 10%;">Search</button>
         </form>

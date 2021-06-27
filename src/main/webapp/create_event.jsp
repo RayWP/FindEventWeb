@@ -46,7 +46,8 @@
     	</script>
     </c:if>
     <div class="form-group" style="padding: 0px;padding-top: 4%;">
-        <form class="d-flex flex-column justify-content-center align-items-center" method="post" action="EventCreate" enctype="multipart/form-data">
+        <form class="d-flex flex-column justify-content-center align-items-center" 
+        method="post" action="EventCreate" enctype="multipart/form-data">
             <div class="container" style="width: 70%;padding-top: 15px;padding-bottom: 15px;background: var(--light);border-radius: 20px;box-shadow: 12px 10px 11px 0px;">
                 <h1>Create Your Event</h1>
                 <div class="form-row">

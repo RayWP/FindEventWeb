@@ -64,5 +64,18 @@ public class UserDAOImpl implements UserDAO{
         }
         return user;
     }
+
+	@Override
+	public int delete(int id) {
+		 int result = 0;
+	        try {
+	            QueryRunner qr = new QueryRunner(MyDatabase.getDataSource());
+	            String sql = "DELETE FROM user WHERE id = ?";
+	            result = qr.execute(sql, id);
+	        } catch (Exception e) {
+	            System.out.println(this.getClass().getName()+ " erorr: " + e.getMessage());
+	        }
+	        return result;
+	}
     
 }

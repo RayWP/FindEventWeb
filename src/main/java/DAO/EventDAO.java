@@ -18,6 +18,7 @@ public interface EventDAO {
     public List<Event> getEventWithName(String name);
     public List<Event> getEventMadeBy(int holder_id);
     public Event getEventWithId(int id);
+    public int update(Event update);
     public int delete(Event event);
     
 }

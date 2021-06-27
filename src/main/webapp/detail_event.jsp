@@ -57,7 +57,7 @@
 	                    <input readonly class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" value="${event.name }">
 	                    <a readonly class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" href="//${event.link }">${event.link }</a>
 	                    <input readonly class="form-control" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" type="date" value="${event.date }">
-	                    <input readonly class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" value="${event.name }">
+	                    <input readonly class="form-control" type="text" style="margin-bottom: 2%;margin-left: 1px;width: 80%;" value="${event.speaker }">
 	                    <input readonly class="form-control" type="text" style="margin-bottom: 2%;margin-left: 0px;width: 80%;height: 100px;" value="${event.description }">
                     </div>
                 </div>

@@ -33,7 +33,11 @@
 
 <body style="background: var(--blue);">
     <%@ include file="header_uni.jsp" %>
-    
+    <c:if test="${not empty alert }">
+    	<script>
+    		alert("${alert}");
+    	</script>
+    </c:if>
     <div class="container" style="margin-top: 50px;">
         <h1 class="text-center text-light">Your Events</h1>
         <div class="row" style="margin-bottom: 20px;">
